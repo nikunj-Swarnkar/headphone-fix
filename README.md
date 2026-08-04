@@ -1,4 +1,4 @@
-![image](https://cdn.hackclub.com/019fcdcd-0bc0-70e2-b70b-bad567f91099/IMG20260803004134%5B1%5D.png)
+<img width="1834" height="938" alt="Make your README" src="https://github.com/user-attachments/assets/ee988fca-47ff-4c3e-b51c-6fce69f49098" />
 
 ### Headphone fix 
 
