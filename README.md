@@ -1,59 +1,135 @@
-<img width="1834" height="938" alt="Make your README" src="https://github.com/user-attachments/assets/ee988fca-47ff-4c3e-b51c-6fce69f49098" />
+<p align="center">
+  <img src="assets/banner.jpg" alt="Headphone Fix — 3D printed repair for Noise Airwave Max 4" width="100%" />
+</p>
 
-### Headphone fix 
+# Headphone Fix
 
----
+**A set of 3D-printable replacement parts that brought my Noise Airwave Max 4 headphones back to life.**
 
-okay so my headphone broke (noise airwave 4 max)
-
-<img width="964" height="1285" alt="IMG20260727231131" src="https://github.com/user-attachments/assets/7a7e3c2c-a2fc-4355-8068-c0d9aa28ca2c" />
-<img width="990" height="1320" alt="IMG20260727231119" src="https://github.com/user-attachments/assets/926eb5f3-281a-4ee2-8637-f2ad116bb8f3" />
-
-so i opened it up and took some measurement 
-<img width="1490" height="1117" alt="IMG20260727234951" src="https://github.com/user-attachments/assets/2fce13db-d031-4e10-bbcf-8bf41f05c3bb" />
-<img width="1337" height="1783" alt="IMG20260731125600" src="https://github.com/user-attachments/assets/14b4e469-a6b3-4aad-b327-1aed4707d5d1" />
-for the hinge 
-
-and 
-<img width="947" height="1263" alt="IMG20260731113833" src="https://github.com/user-attachments/assets/1838d8fa-71fe-44db-94fe-648b5617d45e" />
-<img width="965" height="1287" alt="IMG20260731113902" src="https://github.com/user-attachments/assets/18796def-573f-4457-99c5-c54dde9e8139" />
+![Status](https://img.shields.io/badge/status-fixed-brightgreen)
+![Parts](https://img.shields.io/badge/parts%20printed-3-blue)
+![License](https://img.shields.io/badge/license-MIT-lightgrey)
 
 ---
 
-and made 
-<img width="977" height="493" alt="image" src="https://github.com/user-attachments/assets/520aba3c-6b08-4ca1-b7fc-1be03ef5f66d" />
+## What is this project?
 
-<img width="572" height="520" alt="image" src="https://github.com/user-attachments/assets/d6e246a0-b469-42bf-a6c0-393054ae9ce4" />
+My Noise Airwave Max 4 headphones snapped at the headband, and the company doesn't sell spare parts for it. Instead of throwing away a pair of headphones that still worked perfectly, I measured the broken pieces, remodelled them in CAD, and 3D printed replacements.
+
+This repo contains everything needed to repeat the repair:
+
+| Part | What it replaces |
+| --- | --- |
+| **Hinge** | The pivot that connects the headband arm to the ear cup |
+| **Headrest band** | The curved top band that cracked under stress |
+| **Snap tabs** | The small clips that hold the headrest cover in place |
+
+All models are included as `.step` (editable), `.stl` (any slicer) and `.3mf` (print-ready).
+
+## Why I made this
+
+- **The headband cracked** right where the slider meets the ear cup.
+- **No spare parts.** I couldn't find replacement headband or hinge parts for sale, so an official repair wasn't an option.
+- **The electronics were fine.** Only the plastic shell failed, so replacing the whole pair felt like a waste.
+- **I wanted it to be repairable.** Anyone with the same headphones and access to a 3D printer can now fix theirs instead of buying new ones.
+
+## Tech stack
+
+| Area | Tools / materials |
+| --- | --- |
+| **CAD** | Fusion 360 (`.f3d` source files included) |
+| **Model formats** | STEP, STL, 3MF |
+| **Fabrication** | FDM 3D printing |
+| **Material** | PLA filament |
+| **Measuring** | Digital calipers + test-fit prints |
+
+## How I fixed it
+
+1. **Teardown** — Opened the headband assembly and separated the cracked hinge from the ear cup.
+2. **Measurement** — Measured every mating surface and mounting point with calipers, then sketched the profiles.
+3. **Modelling** — Rebuilt the hinge and headrest band in Fusion 360, matching the original snap-fit geometry so no glue is needed.
+4. **Prototyping** — Printed rough versions to check fit, then iterated on wall thickness and tolerances until the parts clicked in place.
+5. **Final print** — Printed the final set, reassembled the headphones and adjusted one part to compensate for a small piece that was lost during teardown.
+
+## Files in this repo
+
+```
+3d models/
+├── headrest/   head rest fix.f3d | .step | .stl | .3mf
+└── hinge/      hinge.f3d         | .step | .stl | .3mf
+Bom headrest.csv
+```
+
+- **`.3mf`** — ready to slice, no setup needed.
+- **`.stl`** — use this if you slice with something other than the bundled 3MF.
+- **`.step` / `.f3d`** — edit the geometry if your model or printer needs different tolerances.
+
+## Bill of materials
+
+| Item | Qty | Cost (USD) |
+| --- | --- | --- |
+| PLA filament (1 kg spool) | 1 | ~$6.32 |
+
+Total cost of the repair was under **$7** — the printer and calipers I already owned.
+
+## License
+
+Released under the [MIT License](LICENSE). Print it, remix it, sell it — a credit is appreciated.
 
 ---
 
-and after printing and iterations i was left with 
+## Gallery
 
-<img width="1516" height="2022" alt="image" src="https://github.com/user-attachments/assets/37db70a8-34b2-4f82-9a83-72ea9d8d3f0f" />
+### Before
 
-<img width="1237" height="941" alt="image" src="https://github.com/user-attachments/assets/4d094cc8-1727-4915-9130-69720762b979" />
+<p align="center">
+  <img src="assets/before-1.jpg" alt="Cracked headband" width="44%" />
+  <img src="assets/before-2.jpg" alt="Broken hinge area" width="44%" />
+</p>
 
-<img width="739" height="769" alt="IMG20260803004134 1" src="https://github.com/user-attachments/assets/0cae9b71-e4fa-43ae-adf2-3bf211a0ca71" />
+### Teardown & measurements
 
----
+<p align="center">
+  <img src="assets/measure-1.jpg" alt="Measuring the hinge mount" width="44%" />
+  <img src="assets/measure-2.jpg" alt="Measuring the headband profile" width="44%" />
+</p>
+<p align="center">
+  <img src="assets/measure-3.jpg" alt="Close-up of the original hinge" width="44%" />
+  <img src="assets/measure-4.jpg" alt="Snap-fit details on the headrest" width="44%" />
+</p>
 
-also 
-<img width="997" height="1329" alt="IMG20260803012337" src="https://github.com/user-attachments/assets/365593a8-3d37-487a-bdfa-e727ad04ae22" />
-i lost this part on the other side so i had make a small adjustment 
+### CAD
 
-<img width="1306" height="1741" alt="IMG20260803004603" src="https://github.com/user-attachments/assets/a659b547-5305-4628-88f3-71ff10eeab6a" />
+<p align="center">
+  <img src="assets/cad-headrest.jpg" alt="Headrest band model" width="52%" />
+  <img src="assets/cad-hinge.jpg" alt="Hinge model" width="34%" />
+</p>
 
----
+### Printed parts
 
-# prototypes 
+<p align="center">
+  <img src="assets/print-1.jpg" alt="Headband back on the headphones" width="44%" />
+  <img src="assets/print-2.jpg" alt="Printed parts fitted" width="44%" />
+</p>
+<p align="center">
+  <img src="assets/print-3.jpg" alt="Headphones after the repair" width="40%" />
+</p>
 
-<img width="1369" height="1825" alt="IMG20260803000835" src="https://github.com/user-attachments/assets/05b505b9-b1de-4d9b-b6b3-e637b5dc4802" />
-<img width="938" height="1251" alt="IMG20260803003059" src="https://github.com/user-attachments/assets/8a6225f1-2471-47ec-88b1-006515f8686a" />
-<img width="1474" height="1966" alt="IMG20260803020550" src="https://github.com/user-attachments/assets/191f97ef-f8f2-4592-bab1-50e2ac68f18b" />
-<img width="1486" height="1981" alt="IMG20260803013941" src="https://github.com/user-attachments/assets/0451fa95-8731-49c5-bf6b-7f53c7ffac14" />
-<img width="1431" height="1908" alt="IMG20260803013229" src="https://github.com/user-attachments/assets/5388e29b-a14e-4032-b26a-b3d14335f240" />
+### Fitting & adjustments
 
----
+<p align="center">
+  <img src="assets/lost-part.jpg" alt="Original part lost during teardown" width="44%" />
+  <img src="assets/adjust.jpg" alt="Adjustment made to replace the lost part" width="44%" />
+</p>
 
-this was made for Macondo , hackclub 
+### Prototypes
 
+<p align="center">
+  <img src="assets/proto-1.jpg" alt="Early prototype" width="32%" />
+  <img src="assets/proto-2.jpg" alt="Test fit prototype" width="32%" />
+  <img src="assets/proto-3.jpg" alt="Iteration on the hinge" width="32%" />
+</p>
+<p align="center">
+  <img src="assets/proto-4.jpg" alt="Failed test print" width="43%" />
+  <img src="assets/proto-5.jpg" alt="Final prototype set" width="43%" />
+</p>
